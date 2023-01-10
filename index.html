@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background: #f3eae3;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .row {
+      width: 50%;
+      justify-content: center;
+      display: flex;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .mobile-image {
+      display: none;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content .preview {
+      font-size: 18px;
+      margin-bottom: 0px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      letter-spacing: 8px;
+      color: hsl(228, 12%, 48%);
+      text-transform: uppercase;
+    }
+    .content .title{
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 43px;
+      margin-top: 20px;
+      font-family: 'Fraunces', serif;
+    }
+
+    .content .description {
+      color: hsl(228, 12%, 48%);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+    }
+    .price-section{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+   
+    .price-section .price {
+        font-size: 40px;
+        font-weight: 900;
+        color: #3d8168;
+        margin: 0px;
+        padding-right: 20px;
+        font-family: 'Fraunces', serif;
+    }
+    .price-section .discount-price {
+      margin:  0px;
+    }
+
+    .btn {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      width: 100%;
+      border-radius: 10px;
+      background: #3d8168;
+      color: white;
+      border: 0px;
+      padding: 10px;
+    }
+
+    @media screen and (max-width : 1105px){
+      .row {
+        width: 70%;
+      }
+    }
+    @media screen and (max-width : 800px){
+      .mobile-image {
+        display: block;
+      }
+      .desktop-image {
+        display: none;
+      }
+      .row {
+        width: 70%;
+        display: block;
+        margin: 40px 0px;
+      }
+    }
+
+    @media screen and (max-width : 400px){
+      .mobile-image {
+        display: block;
+      }
+      .desktop-image {
+        display: none;
+      }
+      .row {
+        align-items: center;
+        display: block;
+        width: 90%;
+        margin: 40px 0px;
+        border-radius: 10px;
+      }
+      .content .preview{
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .content .title{
+        font-size: 32px;
+      }
+      .content .description{
+        font-size: 16px;
+        line-height: 25px;
+      }
+      .btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <img class="mobile-image" src="images/image-product-mobile.jpg" width="100%" >
+      <img class="desktop-image" src="images/image-product-desktop.jpg" width="300px">
+      <div class="col-6">
+        <div class="content">
+          <h3 class="preview">PerFume</h3>
+          <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+          <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="price-section">
+            <p class="price" >$149.99</p>
+            <p class="discount-price"><s>$169.99</s></p>
+          </div>
+          <div class="button-section">
+            <button class="btn"><img src="images/icon-cart.svg"> Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
